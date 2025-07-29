@@ -1,0 +1,2406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Railings Dubai - Premium Glass Balustrades | Aluminium and Glass Works Dubai</title>
+        <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="mobile-call-button.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header Styles */
+        .header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 0.5rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo img {
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c5aa0;
+            line-height: 1.2;
+        }
+
+        .logo-subtitle {
+            font-size: 0.75rem;
+            color: #f39c12;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: #f39c12;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #f39c12;
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
+            width: 100%;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .dropdown-arrow {
+            font-size: 0.7rem;
+            transition: transform 0.3s ease;
+            color: #666;
+        }
+
+        .dropdown.active .dropdown-arrow {
+            transform: rotate(180deg);
+            color: #f39c12;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+            background: white;
+            min-width: 220px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            list-style: none;
+            padding: 0.5rem 0;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .dropdown.active .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 20px;
+            color: #2c5aa0 !important;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu a:hover {
+            background: #f39c12;
+            color: white !important;
+        }
+
+        .dropdown-menu a::after {
+            display: none !important;
+        }
+
+        @media (min-width: 769px) {
+            .dropdown:hover .dropdown-menu {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+            .dropdown:hover .dropdown-arrow {
+                transform: rotate(180deg);
+                color: #f39c12;
+            }
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #2c5aa0;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-toggle:hover {
+            background: rgba(243, 156, 18, 0.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('Glass Railings/1.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            padding: 0 1rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            opacity: 0.95;
+            line-height: 1.4;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-description {
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .hero-cta {
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            margin-bottom: 2.5rem;
+            font-weight: 500;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            min-width: 140px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-primary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.8);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #333;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.5);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-whatsapp:hover {
+            background: #22c55e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Products Section with Fixed Infinite Slider */
+        .products-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .slider-container {
+            position: relative;
+            margin-bottom: 4rem;
+            overflow: hidden;
+            border-radius: 15px;
+            background: white;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .slider-wrapper {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            gap: 15px;
+        }
+
+        .slide-item {
+            flex: 0 0 280px;
+            height: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        .slide-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .slide-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .slide-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .slide-item h3 {
+            padding: 1rem;
+            text-align: center;
+            font-size: 1.1rem;
+            color: #2c5aa0;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            font-size: 1.3rem;
+            color: #2c5aa0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .slider-btn:hover {
+            background: white;
+            color: #f39c12;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .prev-btn {
+            left: 15px;
+        }
+
+        .next-btn {
+            right: 15px;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: #f39c12;
+            transform: scale(1.2);
+        }
+
+        /* Sections */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 3rem;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: #f39c12;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: #2c5aa0;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .section-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .products-content {
+            text-align: center;
+        }
+
+        .products-content h2 {
+            font-size: 2.5rem;
+            color: #2c5aa0;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .products-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .highlight {
+            color: #f39c12;
+            font-weight: 600;
+        }
+
+        .products-cta {
+            margin-top: 3rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .products-cta .btn {
+            min-width: 200px;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .service-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 6rem;
+        }
+
+        .service-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .service-block.reverse {
+            direction: rtl;
+        }
+
+        .service-block.reverse>* {
+            direction: ltr;
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-content h2 {
+            font-size: 2.2rem;
+            color: #2c5aa0;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .service-content p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-list {
+            list-style: none;
+            margin: 2rem 0;
+            padding: 0;
+        }
+
+        .service-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: #2c5aa0;
+            font-weight: 500;
+        }
+
+        .list-icon {
+            width: 24px;
+            height: 24px;
+            background: #f39c12;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .service-features {
+            margin: 2rem 0;
+        }
+
+        .feature-item {
+            background: #f8f9fa;
+            padding: 1rem 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #f39c12;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .feature-item strong {
+            color: #2c5aa0;
+            font-weight: 600;
+        }
+
+        .service-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .service-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #2c5aa0 0%, #34495e 100%);
+            color: white;
+            position: relative;
+        }
+
+        .pricing-content {
+            text-align: center;
+        }
+
+        .pricing-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .pricing-content p {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .pricing-table-wrapper {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            margin: 0 auto 3rem;
+            max-width: 1000px;
+        }
+
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            color: #333;
+        }
+
+        .pricing-table thead th {
+            background: #2c5aa0;
+            color: white;
+            padding: 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-align: left;
+        }
+
+        .pricing-table tbody td {
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid #eee;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .pricing-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .pricing-table tbody tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .pricing-table tbody tr:hover {
+            background: #e8f4f8;
+            transition: background 0.3s ease;
+        }
+
+        .pricing-table td:first-child {
+            color: #2c5aa0;
+            font-weight: 600;
+        }
+
+        .enquire {
+            color: #f39c12 !important;
+            font-weight: 700 !important;
+        }
+
+        .pricing-cta {
+            margin-top: 2rem;
+        }
+
+        .pricing-cta .btn {
+            font-size: 1.1rem;
+            padding: 15px 40px;
+        }
+
+        /* Advantages Section */
+        .advantages-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .advantage-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-left: 4px solid #f39c12;
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .advantage-card h3 {
+            color: #2c5aa0;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .advantage-card p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Projects Gallery Section */
+        .projects-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .projects-header {
+            text-align: left;
+            margin-bottom: 3rem;
+            max-width: 500px;
+        }
+
+        .projects-company {
+            color: #f39c12;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        .projects-header h2 {
+            font-size: 2.5rem;
+            color: #2c5aa0;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .projects-view-btn {
+            background: #f39c12;
+            color: white;
+            padding: 12px 24px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .projects-view-btn:hover {
+            background: #e67e22;
+            transform: translateY(-2px);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            max-width: 1200px;
+            margin-left: auto;
+        }
+
+        .project-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            aspect-ratio: 1;
+            background: white;
+        }
+
+        .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .project-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #2c5aa0 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .contact-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+
+        .contact-content .highlight {
+            color: #f39c12;
+            font-weight: 600;
+        }
+
+        .contact-content .btn {
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            padding: 15px 40px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1e3a5f;
+            color: white;
+            padding: 40px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: white;
+            font-weight: 600;
+        }
+
+        .footer-description {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin: 1rem 0;
+            opacity: 0.9;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: #f39c12;
+            transform: translateY(-2px);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: #f39c12;
+        }
+
+        .contact-details p {
+            margin-bottom: 0.6rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .contact-details strong {
+            color: #f39c12;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            opacity: 0.7;
+            font-size: 0.85rem;
+        }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 1000;
+        }
+
+        .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 55px;
+            height: 55px;
+            background: #25D366;
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.8);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .nav-menu {
+                gap: 1.5rem;
+            }
+
+            .service-block {
+                gap: 2rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+            }
+
+            .slide-item {
+                flex: 0 0 240px;
+                height: 220px;
+            }
+
+            .slide-item img {
+                height: 160px;
+            }
+
+            .advantages-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 2rem 0;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: all 0.3s ease;
+                pointer-events: none;
+                max-height: 80vh;
+                overflow-y: auto;
+                z-index: 999;
+            }
+
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            .nav-menu>li {
+                margin: 0;
+                padding: 0 2rem;
+                width: 100%;
+            }
+
+            .nav-menu>li>a {
+                padding: 15px 0;
+                display: block;
+                font-size: 1.1rem;
+                border-bottom: 1px solid #f0f0f0;
+            }
+
+            .dropdown-menu {
+                position: static;
+                background: #f8f9fa;
+                box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                margin: 0;
+                border-radius: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease, padding 0.3s ease;
+                width: 100%;
+                border: none;
+                padding: 0;
+            }
+
+            .dropdown.active .dropdown-menu {
+                max-height: 300px;
+                padding: 0.5rem 0;
+            }
+
+            .dropdown-menu a {
+                padding: 12px 30px !important;
+                font-size: 1rem;
+                color: #555 !important;
+                border-bottom: 1px solid #e0e0e0;
+                background: transparent;
+            }
+
+            .dropdown-menu a:hover {
+                background: #e9ecef !important;
+                color: #2c5aa0 !important;
+            }
+
+            .dropdown-menu a:last-child {
+                border-bottom: none;
+            }
+
+            .dropdown-toggle {
+                padding: 15px 0;
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .dropdown-arrow {
+                font-size: 0.8rem;
+                margin-left: auto;
+            }
+
+            .logo-text {
+                font-size: 1.3rem;
+            }
+
+            .logo-subtitle {
+                font-size: 0.7rem;
+            }
+
+            .hero {
+                padding-top: 100px;
+                background-attachment: scroll;
+            }
+
+            .section {
+                padding: 40px 0;
+            }
+
+            .service-block,
+            .products-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .projects-header {
+                text-align: center;
+                max-width: none;
+                margin-bottom: 2rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.8rem;
+                margin-left: 0;
+            }
+
+            .slide-item {
+                flex: 0 0 200px;
+                height: 200px;
+            }
+
+            .slide-item img {
+                height: 140px;
+            }
+
+            .slider-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+            }
+
+            .prev-btn {
+                left: 10px;
+            }
+
+            .next-btn {
+                right: 10px;
+            }
+
+            .products-content h2 {
+                font-size: 2rem;
+            }
+
+            .products-content p {
+                font-size: 1rem;
+            }
+
+            .products-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .products-cta .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .advantages-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                text-align: center;
+            }
+
+            .footer-section:first-child {
+                margin-bottom: 1rem;
+            }
+
+            .contact-info {
+                margin-top: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 0.5rem;
+            }
+
+            .nav-container {
+                padding: 0 0.5rem;
+            }
+
+            .logo img {
+                width: 35px;
+                height: 35px;
+            }
+
+            .logo-text {
+                font-size: 1.1rem;
+            }
+
+            .logo-subtitle {
+                font-size: 0.65rem;
+            }
+
+            .hero-content {
+                padding: 1.5rem 0.5rem;
+            }
+
+            .hero-badge {
+                font-size: 0.8rem;
+                padding: 0.6rem 1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 250px;
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+
+            .slider-container {
+                padding: 1rem;
+            }
+
+            .slide-item {
+                flex: 0 0 160px;
+                height: 180px;
+            }
+
+            .slide-item img {
+                height: 120px;
+            }
+
+            .slider-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+
+            .prev-btn {
+                left: 5px;
+            }
+
+            .next-btn {
+                right: 5px;
+            }
+
+            .products-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.6rem;
+            }
+
+            .project-item {
+                border-radius: 4px;
+            }
+
+            .service-content {
+                padding: 1rem;
+            }
+
+            .service-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .advantage-card {
+                padding: 1.5rem;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .whatsapp-btn {
+                width: 50px;
+                height: 50px;
+            }
+
+            .footer {
+                padding: 30px 0 15px;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-1 {
+            margin-bottom: 1rem;
+        }
+
+        .mb-2 {
+            margin-bottom: 2rem;
+        }
+
+        .mt-1 {
+            margin-top: 1rem;
+        }
+
+        .mt-2 {
+            margin-top: 2rem;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Focus styles for accessibility */
+        .btn:focus,
+        .nav-menu a:focus,
+        .mobile-menu-toggle:focus {
+            outline: 2px solid #f39c12;
+            outline-offset: 2px;
+        }
+
+        /* Loading animation for images */
+        .slide-item img,
+        .service-image img,
+        .project-item img {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Logo">
+                <div>
+                    <div class="logo-text">Aluminium and Glass Works Dubai</div>
+                    <div class="logo-subtitle">BAB AL RAYYAN METAL DOORS &WINDOWS MAKING</div>
+                </div>
+            </a>
+
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Aluminium <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="page1.html">Aluminium Doors</a></li>
+                            <li><a href="page2.html">Aluminium Windows</a></li>
+                            <li><a href="page3.html">Aluminium Pergola</a></li>
+                            <li><a href="page4.html">Bifold Doors</a></li>
+                            <li><a href="page9.html">Pet Doors</a></li>
+                            <li><a href="page11.html">Aluminium Fence</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Glass <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="page5.html">Shower Glass</a></li>
+                            <li><a href="page5.html">Glass Partition</a></li>
+                            <li><a href="page6.html">Glass Room</a></li>
+                            <li><a href="page8.html" class="active">Glass Railing</a></li>
+<li><a href="page10.html">Fly Screens</a></li>
+                                                       <li><a href="page12.html">Glass Mirror</a></li>
+                            <li><a href="page13.html">Louver Box</a></li>                                </ul>
+                    </li>
+                    <li><a href="tel:+971588806498">Contact us</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    ☰
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">
+                #1 Glass Railing Services in Dubai & UAE
+            </div>
+
+            <h1>Premium Glass Railings & Balustrades in Dubai</h1>
+
+            <p class="hero-subtitle">
+                Modern, Safe & Stylish Glass Railing Solutions for Homes & Businesses across Dubai, UAE
+            </p>
+
+            <p class="hero-description">
+                Transform your space with elegant glass railings that combine safety, style, and unobstructed views. As
+                Dubai's leading
+                glass railing specialists with over 25 years of experience, we design and install premium frameless and
+                framed glass
+                balustrades that enhance any property while meeting strict UAE safety standards.
+            </p>
+
+            <p class="hero-cta">
+                Get in touch with Dubai's top glass railing manufacturer for expert consultation and competitive quotes
+                on your
+                glass railing project.
+            </p>
+
+            <div class="cta-buttons">
+                <a href="#pricing" class="btn btn-primary">
+                    Prices starting from only<br>
+                    <strong>AED 950</strong>
+                </a>
+                <a href="tel:+971588806498" class="btn btn-secondary">
+                    Get a free quote today<br>
+                    <strong>📞   971588806498</strong>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section with Fixed Infinite Slider -->
+    <section class="products-section section" id="products">
+        <div class="container">
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <div class="slider-track" id="sliderTrack">
+                        <div class="slide-item">
+                            <img src="Glass%20Railings/1.png" alt="Frameless Glass Balustrades">
+                            <!-- <h3>Frameless Glass Balustrades</h3> -->
+                        </div>
+                        <div class="slide-item">
+                            <img src="Glass%20Railings/2.png" alt="Stair Glass Railings">
+                            <!-- <h3>Stair Glass Railings</h3> -->
+                        </div>
+                        <div class="slide-item">
+                            <img src="Glass%20Railings/4.png" alt="Spigot Glass Balustrades">
+                            <!-- <h3>Spigot Glass Balustrades</h3> -->
+                        </div>
+                        <div class="slide-item">
+                            <img src="Glass%20Railings/5.png" alt="Deck Glass Railings">
+                            <!-- <h3>Deck Glass Railings</h3> -->
+                        </div>
+                        <div class="slide-item">
+                            <img src="Glass%20Railings/6.png" alt="Framed Glass Balustrades">
+                            <!-- <h3>Framed Glass Balustrades</h3> -->
+                        </div>
+                        <div class="slide-item">
+                            <img src="Glass%20Railings/7.png" alt="Curved Glass Balustrades">
+                            <!-- <h3>Curved Glass Balustrades</h3> -->
+                        </div>
+                        <div class="slide-item">
+                            <img src="Glass%20Railings/8.png" alt="Pool Glass Railings">
+                            <!-- <h3>Pool Glass Railings</h3> -->
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <button class="slider-btn prev-btn" id="prevBtn" aria-label="Previous slide">‹</button>
+                <button class="slider-btn next-btn" id="nextBtn" aria-label="Next slide">›</button>
+
+                <div class="slider-dots" id="sliderDots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                    <span class="dot" data-slide="4"></span>
+                    <span class="dot" data-slide="5"></span>
+                    <span class="dot" data-slide="6"></span>
+                </div>
+            </div>
+
+            <div class="products-content">
+                <h2>Enhance Your Property with Premium Glass Railings in Dubai!</h2>
+                <p>
+                    Looking for the perfect combination of safety, style, and unobstructed views? At Aluminium and Glass
+                    Works Dubai,
+                    Dubai's premier <span class="highlight">glass railing manufacturer</span>, we specialize in
+                    designing, manufacturing,
+                    and installing custom glass railings and balustrades that transform any space into a modern
+                    architectural masterpiece.
+                </p>
+                <p>
+                    From elegant staircase railings to stunning balcony balustrades, our expert team delivers premium
+                    glass railing
+                    solutions using tempered safety glass and high-quality aluminum frames. All our installations meet
+                    Dubai's strict
+                    safety standards while maximizing natural light and preserving your views.
+                </p>
+
+                <div class="products-cta">
+                    <a href="#services" class="btn btn-primary">LEARN MORE</a>
+                    <a href="tel:+971588806498" class="btn btn-secondary">GET FREE QUOTE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <div class="pricing-content">
+                <h2>How much do Glass Railings Cost in Dubai?</h2>
+                <p>
+                    As leading glass railing specialists and installers, we provide competitive pricing tailored to your
+                    unique project
+                    requirements and budget. Premium quality doesn't have to compromise affordability.
+                </p>
+
+                <div class="pricing-table-wrapper">
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th>Railing Type</th>
+                                <th>Specification</th>
+                                <th>Cost per sq.m</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>STAIR GLASS RAILING</td>
+                                <td>BASIC</td>
+                                <td>AED 950</td>
+                            </tr>
+                            <tr>
+                                <td>FRAMELESS GLASS BALUSTRADE</td>
+                                <td>STANDOFF SYSTEM</td>
+                                <td>AED 850</td>
+                            </tr>
+                            <tr>
+                                <td>FRAMED GLASS BALUSTRADE</td>
+                                <td>ALUMINUM FRAME</td>
+                                <td>AED 750</td>
+                            </tr>
+                            <tr>
+                                <td>SPIGOT GLASS BALUSTRADE</td>
+                                <td>MODERN DESIGN</td>
+                                <td>AED 900</td>
+                            </tr>
+                            <tr>
+                                <td>CUSTOMISED GLASS RAILING</td>
+                                <td>BESPOKE DESIGN</td>
+                                <td class="enquire">ENQUIRE NOW</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p style="color: white; margin-top: 2rem; font-size: 1.1rem;">
+                    Transform your property with safe, stylish glass railings designed for Dubai's climate. Call us now
+                    +971588806498
+                </p>
+
+                <div class="pricing-cta">
+                    <a href="tel:+971588806498" class="btn btn-primary">GET A FREE ESTIMATE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Gallery Section -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <div class="projects-header">
+                <h3 class="projects-company">Aluminium and Glass Works Dubai</h3>
+                <h2>RECENT GLASS RAILING<br>PROJECTS IN UAE</h2>
+                <a href="tel:+971588806498" class="projects-view-btn">VIEW ALL PROJECTS</a>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-item">
+                    <img src="Glass%20Railings/1.png" alt="Glass Railing Project 1">
+                </div>
+                <div class="project-item">
+                    <img src="Glass%20Railings/2.png" alt="Glass Railing Project 2">
+                </div>
+                <div class="project-item">
+                    <img src="Glass%20Railings/4.png" alt="Glass Railing Project 3">
+                </div>
+                <div class="project-item">
+                    <img src="Glass%20Railings/5.png" alt="Glass Railing Project 4">
+                </div>
+                <div class="project-item">
+                    <img src="Glass%20Railings/6.png" alt="Glass Railing Project 5">
+                </div>
+                <div class="project-item">
+                    <img src="Glass%20Railings/7.png" alt="Glass Railing Project 6">
+                </div>
+                <div class="project-item">
+                    <img src="Glass%20Railings/8.png" alt="Glass Railing Project 7">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <!-- Glass Railing Types Service Block -->
+            <div class="service-block">
+                <div class="service-content">
+                    <h2>7 Types of Glass Railings We Offer in Dubai</h2>
+                    <p>
+                        Our expert glass railing specialists can design and install stunning glass balustrades perfectly
+                        suited to your Dubai property.
+                        We offer various glass railing types and styles to match your architectural vision.
+                    </p>
+
+                    <ul class="service-list">
+                        <li>
+                            <span class="list-icon">⊕</span>
+                            <span>Frameless Glass Balustrades</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">⊕</span>
+                            <span>Framed Glass Balustrades</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">⊕</span>
+                            <span>Spigot Glass Balustrades</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">⊕</span>
+                            <span>Glass Deck Railings</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">⊕</span>
+                            <span>Glass Stair Railings</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">⊕</span>
+                            <span>Curved Glass Balustrades</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">⊕</span>
+                            <span>Structural Glass Balustrades</span>
+                        </li>
+                    </ul>
+
+                    <p>
+                        Let our Dubai glass railing experts recommend the perfect design to enhance your property's
+                        safety and aesthetic appeal.
+                    </p>
+
+                    <a href="tel:+971588806498" class="btn btn-primary">CALL NOW</a>
+                </div>
+
+                <div class="service-image">
+                    <img src="Glass Railings/4.png"
+                        alt="Glass Railing Types Dubai">
+                </div>
+            </div>
+
+            <!-- Glass Railing Services Block -->
+            <div class="service-block reverse">
+                <div class="service-image">
+                    <img src="Glass Railings/2.png"
+                        alt="Glass Railing Services Dubai">
+                </div>
+
+                <div class="service-content">
+                    <h2>Our Complete Glass Railing Services:</h2>
+                    <p>
+                        Our dedicated glass railing team provides comprehensive services for stunning residential and
+                        commercial projects across the UAE.
+                    </p>
+
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <strong>Consultation & Design</strong> - Expert guidance from concept to material selection
+                        </div>
+                        <div class="feature-item">
+                            <strong>Custom Fabrication</strong> - Tailored glass railings to exact specifications
+                        </div>
+                        <div class="feature-item">
+                            <strong>Professional Installation</strong> - New installations and replacements with quality
+                            checks
+                        </div>
+                        <div class="feature-item">
+                            <strong>Maintenance & Repairs</strong> - Routine maintenance and emergency repair services
+                        </div>
+                        <div class="feature-item">
+                            <strong>Safety Compliance</strong> - All installations meet Dubai's strict safety standards
+                        </div>
+                        <div class="feature-item">
+                            <strong>Warranty Service</strong> - Comprehensive aftercare and warranty support
+                        </div>
+                    </div>
+
+                    <p>
+                        Trust our full-service team to deliver safe, stylish, and durable glass railing solutions.
+                        Contact us today!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="advantages-section" id="advantages">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Why Choose Glass Railings</div>
+                <h2 class="section-title">Advantages of Glass Railings in Dubai</h2>
+                <p class="section-text">
+                    Discover why glass railings are the preferred choice for modern Dubai properties, offering unmatched
+                    benefits
+                    for both residential and commercial spaces.
+                </p>
+            </div>
+
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <h3>Unrestricted Views & Natural Light</h3>
+                    <p>Glass railings maximize visibility and enhance openness, allowing unobstructed views of Dubai's
+                        stunning landscapes while flooding your space with natural light.</p>
+                </div>
+                <div class="advantage-card">
+                    <h3>Contemporary Minimalist Style</h3>
+                    <p>Sleek, modern appearance that perfectly suits luxury and minimalist interiors, adding
+                        sophisticated elegance to any architectural design.</p>
+                </div>
+                <div class="advantage-card">
+                    <h3>Extreme Durability</h3>
+                    <p>Tempered glass construction resists scratches, cracks, and corrosion, providing long-lasting
+                        performance in Dubai's challenging climate.</p>
+                </div>
+                <div class="advantage-card">
+                    <h3>Engineered Safety</h3>
+                    <p>Tempered glass is 4-5 times stronger than standard glass and shatters safely into blunt pieces,
+                        meeting strict UAE safety codes for ultimate protection.</p>
+                </div>
+                <div class="advantage-card">
+                    <h3>Increased Property Value</h3>
+                    <p>Premium glass railings enhance both aesthetic appeal and market value of your property, making it
+                        a smart long-term investment.</p>
+                </div>
+                <div class="advantage-card">
+                    <h3>Minimal Maintenance</h3>
+                    <p>Easy to clean and maintain, glass railings require minimal upkeep while maintaining their
+                        pristine appearance year after year.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Get Free Consultation! Contact us</h2>
+                <p>
+                    Looking for the <span class="highlight">best glass railing services</span> in Dubai, Burdubai& Abu
+                    Dhabi? Choose Aluminium and Glass Works Dubai
+                    for unmatched expertise in glass railing design and installation. We guarantee 100% satisfaction
+                    with our professional
+                    aluminum & glass contracting services.
+                </p>
+                <p>
+                    Our team of glass railing specialists is here to help you with all your balustrade needs, from
+                    selecting the perfect
+                    style to professional installation. We even offer maintenance and repair services, ensuring your
+                    glass railings remain
+                    safe and beautiful for years to come.
+                </p>
+                <p>
+                    Get a free quote today and discover how Aluminium and Glass Works Dubai can enhance your property
+                    with premium glass railings
+                    that combine safety, style, and stunning views!
+                </p>
+                <a href="tel:+971588806498" class="btn btn-primary">CALL NOW</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo">
+                            <img src="logo.png" alt="Logo" width="50px">
+                            <div>
+                                <div class="logo-text">Aluminium and Glass Works Dubai</div>
+                                <div class="logo-subtitle">BAB AL RAYYAN METAL DOORS &WINDOWS MAKING</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Aluminium and Glass Works Dubai, established in 2000, is a leading UAE-based glass and aluminum
+                        contracting company providing installation services and quality products across the Emirates for
+                        over a decade.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/971588806498" class="social-link" aria-label="WhatsApp">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="tel:+971588806498">Contact Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Aluminium</h3>
+                    <ul class="footer-links">
+                        <li><a href="page1.html">Aluminium Doors</a></li>
+                        <li><a href="page2.html">Aluminium Windows</a></li>
+                        <li><a href="page3.html">Aluminium Pergola</a></li>
+                        <li><a href="page4.html">Bifold Doors</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Glass</h3>
+                    <ul class="footer-links">
+                        <li><a href="page5.html">Shower Glass</a></li>
+                        <li><a href="page6.html">Glass Partition</a></li>
+                        <li><a href="page6.html">Glass Room</a></li>
+                        <li><a href="page8.html">Glass Railing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section contact-info">
+                    <h3>Contact</h3>
+                    <div class="contact-map mb-1">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.7!2d55.5!3d25.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDI0JzAwLjAiTiA1NcKwMzAnMDAuMCJF!5e0!3m2!1sen!2sae!4v1234567890"
+                            width="100%" height="120" style="border:0; border-radius: 8px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="contact-details">
+                        <p><strong>+971588806498</strong></p>
+                        <p>Shop no 8, Near Storia Hotel Meena Bazar<br>Burdubai- United Arab Emirates</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Copyright © 2024 - Paras Gupta BAB AL RAYYAN METAL DOORS &WINDOWS MAKING</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/971588806498" target="_blank" class="whatsapp-btn" aria-label="Contact via WhatsApp">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516" />
+            </svg>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu functionality
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        function toggleMobileMenu() {
+            navMenu.classList.toggle('active');
+            mobileMenuToggle.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+
+            // Close all dropdowns when toggling mobile menu
+            document.querySelectorAll('.dropdown').forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
+
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+
+        // Dropdown functionality
+        function initializeDropdowns() {
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            dropdowns.forEach(dropdown => {
+                const toggle = dropdown.querySelector('.dropdown-toggle');
+                const menu = dropdown.querySelector('.dropdown-menu');
+
+                if (toggle && menu) {
+                    // Remove any existing event listeners
+                    toggle.removeEventListener('click', handleDropdownClick);
+
+                    // Add click event listener
+                    toggle.addEventListener('click', handleDropdownClick);
+
+                    // Add hover events for desktop
+                    if (window.innerWidth > 768) {
+                        dropdown.addEventListener('mouseenter', () => {
+                            closeAllDropdowns();
+                            dropdown.classList.add('active');
+                        });
+
+                        dropdown.addEventListener('mouseleave', () => {
+                            dropdown.classList.remove('active');
+                        });
+                    }
+                }
+            });
+        }
+
+        function handleDropdownClick(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const dropdown = e.target.closest('.dropdown');
+            const isActive = dropdown.classList.contains('active');
+
+            // Close all other dropdowns
+            closeAllDropdowns();
+
+            // Toggle current dropdown
+            if (!isActive) {
+                dropdown.classList.add('active');
+            }
+        }
+
+        function closeAllDropdowns() {
+            document.querySelectorAll('.dropdown').forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
+
+        function closeMobileMenu() {
+            navMenu.classList.remove('active');
+            mobileMenuToggle.textContent = '☰';
+            closeAllDropdowns();
+        }
+
+        // Close dropdown/menu when clicking outside
+        document.addEventListener('click', (e) => {
+            // Close dropdowns if clicking outside
+            if (!e.target.closest('.dropdown')) {
+                closeAllDropdowns();
+            }
+
+            // Close mobile menu if clicking outside nav
+            if (!e.target.closest('.nav-container')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close mobile menu when clicking nav links (but not dropdown toggles)
+        document.querySelectorAll('.nav-menu a:not(.dropdown-toggle)').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Close dropdown when clicking dropdown menu items
+        document.querySelectorAll('.dropdown-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                closeAllDropdowns();
+                closeMobileMenu();
+            });
+        });
+
+        // Handle window resize
+        function handleResize() {
+            if (window.innerWidth > 768) {
+                // Desktop: close mobile menu and reinitialize dropdowns
+                closeMobileMenu();
+                initializeDropdowns();
+            } else {
+                // Mobile: remove hover events and reinitialize
+                document.querySelectorAll('.dropdown').forEach(dropdown => {
+                    dropdown.removeEventListener('mouseenter', () => { });
+                    dropdown.removeEventListener('mouseleave', () => { });
+                });
+                initializeDropdowns();
+            }
+        }
+
+        // Initialize dropdowns on load
+        initializeDropdowns();
+
+        // Reinitialize on resize with debounce
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(handleResize, 250);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // FIXED INFINITE SLIDER IMPLEMENTATION
+        class InfiniteSlider {
+            constructor(container) {
+                this.container = container;
+                this.track = container.querySelector('#sliderTrack');
+                this.slides = Array.from(container.querySelectorAll('.slide-item'));
+                this.dots = Array.from(container.querySelectorAll('.dot'));
+                this.prevBtn = container.querySelector('#prevBtn');
+                this.nextBtn = container.querySelector('#nextBtn');
+
+                this.currentIndex = 0;
+                this.totalSlides = this.slides.length;
+                this.isTransitioning = false;
+                this.autoplayInterval = null;
+                this.autoplayDelay = 4000;
+
+                this.init();
+            }
+
+            init() {
+                this.createClones();
+                this.setupEventListeners();
+                this.updateSlider(false);
+                this.startAutoplay();
+            }
+
+            createClones() {
+                // Clone first few slides and append to end
+                for (let i = 0; i < 3; i++) {
+                    const clone = this.slides[i].cloneNode(true);
+                    clone.classList.add('clone');
+                    this.track.appendChild(clone);
+                }
+
+                // Clone last few slides and prepend to beginning
+                for (let i = this.totalSlides - 3; i < this.totalSlides; i++) {
+                    const clone = this.slides[i].cloneNode(true);
+                    clone.classList.add('clone');
+                    this.track.insertBefore(clone, this.track.firstChild);
+                }
+
+                // Update current index to account for prepended clones
+                this.currentIndex = 3;
+            }
+
+            getSlideWidth() {
+                const slide = this.track.querySelector('.slide-item');
+                return slide ? slide.offsetWidth + 15 : 295; // 280px + 15px gap
+            }
+
+            updateSlider(animate = true) {
+                const slideWidth = this.getSlideWidth();
+                const translateX = -this.currentIndex * slideWidth;
+
+                if (animate) {
+                    this.track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                    this.isTransitioning = true;
+
+                    setTimeout(() => {
+                        this.isTransitioning = false;
+                    }, 500);
+                } else {
+                    this.track.style.transition = 'none';
+                }
+
+                this.track.style.transform = `translateX(${translateX}px)`;
+                this.updateDots();
+            }
+
+            updateDots() {
+                const realIndex = this.getRealIndex();
+                this.dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === realIndex);
+                });
+            }
+
+            getRealIndex() {
+                // Convert current index to real slide index (0 to totalSlides-1)
+                let realIndex = (this.currentIndex - 3) % this.totalSlides;
+                if (realIndex < 0) realIndex += this.totalSlides;
+                return realIndex;
+            }
+
+            next() {
+                if (this.isTransitioning) return;
+
+                this.currentIndex++;
+                this.updateSlider(true);
+
+                // Check if we need to reset position for infinite loop
+                if (this.currentIndex >= this.totalSlides + 3) {
+                    setTimeout(() => {
+                        this.currentIndex = 3;
+                        this.updateSlider(false);
+                    }, 500);
+                }
+            }
+
+            prev() {
+                if (this.isTransitioning) return;
+
+                this.currentIndex--;
+                this.updateSlider(true);
+
+                // Check if we need to reset position for infinite loop
+                if (this.currentIndex < 3) {
+                    setTimeout(() => {
+                        this.currentIndex = this.totalSlides + 2;
+                        this.updateSlider(false);
+                    }, 500);
+                }
+            }
+
+            goToSlide(index) {
+                if (this.isTransitioning) return;
+
+                this.currentIndex = index + 3; // Add offset for cloned slides
+                this.updateSlider(true);
+            }
+
+            startAutoplay() {
+                this.stopAutoplay();
+                this.autoplayInterval = setInterval(() => {
+                    this.next();
+                }, this.autoplayDelay);
+            }
+
+            stopAutoplay() {
+                if (this.autoplayInterval) {
+                    clearInterval(this.autoplayInterval);
+                    this.autoplayInterval = null;
+                }
+            }
+
+            setupEventListeners() {
+                // Button controls
+                this.nextBtn.addEventListener('click', () => {
+                    this.next();
+                    this.stopAutoplay();
+                    setTimeout(() => this.startAutoplay(), 5000);
+                });
+
+                this.prevBtn.addEventListener('click', () => {
+                    this.prev();
+                    this.stopAutoplay();
+                    setTimeout(() => this.startAutoplay(), 5000);
+                });
+
+                // Dot navigation
+                this.dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        this.goToSlide(index);
+                        this.stopAutoplay();
+                        setTimeout(() => this.startAutoplay(), 5000);
+                    });
+                });
+
+                // Pause autoplay on hover
+                this.container.addEventListener('mouseenter', () => {
+                    this.stopAutoplay();
+                });
+
+                this.container.addEventListener('mouseleave', () => {
+                    this.startAutoplay();
+                });
+
+                // Touch/swipe support
+                this.setupTouchEvents();
+
+                // Resize handler
+                window.addEventListener('resize', () => {
+                    this.updateSlider(false);
+                });
+
+                // Pause when page is not visible
+                document.addEventListener('visibilitychange', () => {
+                    if (document.hidden) {
+                        this.stopAutoplay();
+                    } else {
+                        this.startAutoplay();
+                    }
+                });
+            }
+
+            setupTouchEvents() {
+                let startX = 0;
+                let currentX = 0;
+                let isDragging = false;
+
+                const handleStart = (e) => {
+                    startX = e.touches ? e.touches[0].clientX : e.clientX;
+                    currentX = startX;
+                    isDragging = true;
+                    this.track.style.transition = 'none';
+                    this.stopAutoplay();
+                };
+
+                const handleMove = (e) => {
+                    if (!isDragging) return;
+
+                    e.preventDefault();
+                    currentX = e.touches ? e.touches[0].clientX : e.clientX;
+
+                    const diff = currentX - startX;
+                    const slideWidth = this.getSlideWidth();
+                    const currentTransform = -this.currentIndex * slideWidth;
+
+                    this.track.style.transform = `translateX(${currentTransform + diff}px)`;
+                };
+
+                const handleEnd = () => {
+                    if (!isDragging) return;
+
+                    isDragging = false;
+                    const diff = currentX - startX;
+                    const threshold = 50;
+
+                    if (Math.abs(diff) > threshold) {
+                        if (diff > 0) {
+                            this.prev();
+                        } else {
+                            this.next();
+                        }
+                    } else {
+                        this.updateSlider(true);
+                    }
+
+                    setTimeout(() => this.startAutoplay(), 3000);
+                };
+
+                // Touch events
+                this.container.addEventListener('touchstart', handleStart, { passive: false });
+                this.container.addEventListener('touchmove', handleMove, { passive: false });
+                this.container.addEventListener('touchend', handleEnd);
+
+                // Mouse events for desktop
+                this.container.addEventListener('mousedown', handleStart);
+                this.container.addEventListener('mousemove', handleMove);
+                this.container.addEventListener('mouseup', handleEnd);
+                this.container.addEventListener('mouseleave', handleEnd);
+
+                // Prevent default drag behavior
+                this.container.addEventListener('dragstart', (e) => e.preventDefault());
+            }
+        }
+
+        // Initialize slider when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            const sliderContainer = document.querySelector('.slider-container');
+            if (sliderContainer) {
+                new InfiniteSlider(sliderContainer);
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.service-block, .project-item, .advantage-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>

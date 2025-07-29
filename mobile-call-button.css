@@ -1,0 +1,121 @@
+/* Mobile Sticky Call Button Styles */
+.mobile-call-sticky {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+    display: none; /* Hidden by default, shown only on mobile */
+}
+
+.mobile-call-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: linear-gradient(135deg, #2c5aa0 0%, #1e4080 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 20px rgba(44, 90, 160, 0.4);
+    transition: all 0.3s ease;
+    animation: pulse-call 2s infinite;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    white-space: nowrap;
+}
+
+.mobile-call-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(44, 90, 160, 0.6);
+    background: linear-gradient(135deg, #1e4080 0%, #2c5aa0 100%);
+    color: white;
+    text-decoration: none;
+}
+
+.mobile-call-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 15px rgba(44, 90, 160, 0.5);
+}
+
+.call-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    animation: ring 1.5s ease-in-out infinite;
+}
+
+.call-text {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+.call-number {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* Animations */
+@keyframes pulse-call {
+    0%, 100% { 
+        box-shadow: 0 4px 20px rgba(44, 90, 160, 0.4);
+        transform: scale(1);
+    }
+    50% { 
+        box-shadow: 0 4px 25px rgba(44, 90, 160, 0.7);
+        transform: scale(1.02);
+    }
+}
+
+@keyframes ring {
+    0%, 100% { transform: rotate(0deg); }
+    10%, 30% { transform: rotate(-10deg); }
+    20% { transform: rotate(10deg); }
+}
+
+/* Show only on mobile devices */
+@media (max-width: 768px) {
+    .mobile-call-sticky {
+        display: block;
+    }
+}
+
+/* Smaller mobile devices */
+@media (max-width: 480px) {
+    .mobile-call-sticky {
+        bottom: 15px;
+        left: 15px;
+    }
+    
+    .mobile-call-btn {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+    
+    .call-icon {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .call-text {
+        font-size: 12px;
+    }
+    
+    .call-number {
+        font-size: 13px;
+    }
+}
+
+/* Very small devices - compact version */
+@media (max-width: 360px) {
+    .mobile-call-btn {
+        padding: 8px 12px;
+        border-radius: 20px;
+    }
+    
+    .call-text {
+        display: none; /* Hide "Call Now" text on very small screens */
+    }
+}

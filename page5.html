@@ -1,0 +1,2239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Partition Dubai | Aluminium and Glass Works Dubai</title>
+        <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="mobile-call-button.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header Styles - Updated to match index.html */
+        .header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 0.5rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo img {
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c5aa0;
+            line-height: 1.2;
+        }
+
+        .logo-subtitle {
+            font-size: 0.75rem;
+            color: #f39c12;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: #f39c12;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #f39c12;
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
+            width: 100%;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .dropdown-arrow {
+            font-size: 0.7rem;
+            transition: transform 0.3s ease;
+            color: #666;
+        }
+
+        .dropdown.active .dropdown-arrow {
+            transform: rotate(180deg);
+            color: #f39c12;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+            background: white;
+            min-width: 220px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            list-style: none;
+            padding: 0.5rem 0;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .dropdown.active .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 20px;
+            color: #2c5aa0 !important;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu a:hover {
+            background: #f39c12;
+            color: white !important;
+        }
+
+        .dropdown-menu a::after {
+            display: none !important;
+        }
+
+        /* Desktop hover effects */
+        @media (min-width: 769px) {
+            .dropdown:hover .dropdown-menu {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+            .dropdown:hover .dropdown-arrow {
+                transform: rotate(180deg);
+                color: #f39c12;
+            }
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #2c5aa0;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-toggle:hover {
+            background: rgba(243, 156, 18, 0.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('gp.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 1rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h2 {
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            margin-bottom: 2rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .hero-cta {
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            font-weight: 500;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            min-width: 180px;
+        }
+
+        .btn-primary {
+            background: #f39c12;
+            color: white;
+            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: #e67e22;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(243, 156, 18, 0.6);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #333;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.5);
+        }
+
+        .highlight {
+            color: #f39c12;
+            font-weight: 600;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 3rem;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: #f39c12;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: #2c5aa0;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .section-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* Slider - Updated to match index.html */
+        .slider-container {
+            position: relative;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            border-radius: 15px;
+            background: white;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .slider-wrapper {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            gap: 15px;
+        }
+
+        .slide-item {
+            flex: 0 0 280px;
+            height: 180px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .slide-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .slide-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .slide-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            font-size: 1.3rem;
+            color: #2c5aa0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .slider-btn:hover {
+            background: white;
+            color: #f39c12;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .prev-btn {
+            left: 15px;
+        }
+
+        .next-btn {
+            right: 15px;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: #f39c12;
+            transform: scale(1.2);
+        }
+
+        /* Services Section */
+        .service-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 6rem;
+        }
+
+        .service-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .service-block.reverse {
+            direction: rtl;
+        }
+
+        .service-block.reverse>* {
+            direction: ltr;
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-content h2 {
+            font-size: 2.2rem;
+            color: #2c5aa0;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .service-content p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-list {
+            list-style: none;
+            margin: 2rem 0;
+            padding: 0;
+        }
+
+        .service-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: #2c5aa0;
+            font-weight: 500;
+        }
+
+        .list-icon {
+            width: 24px;
+            height: 24px;
+            background: #f39c12;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .service-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .service-buttons .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 160px;
+            text-decoration: none;
+        }
+
+        .service-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .service-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            background: linear-gradient(135deg, #e8f4f8 0%, #f1f8fc 100%);
+        }
+
+        .pricing-content {
+            text-align: center;
+            color: #333;
+        }
+
+        .pricing-table-wrapper {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin: 0 auto 2rem;
+            max-width: 1000px;
+        }
+
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            color: #333;
+        }
+
+        .pricing-table thead th {
+            background: #2c5aa0;
+            color: white;
+            padding: 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-align: left;
+        }
+
+        .pricing-table tbody td {
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid #eee;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .pricing-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .pricing-table tbody tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .pricing-table tbody tr:hover {
+            background: #e8f4f8;
+            transition: background 0.3s ease;
+        }
+
+        .pricing-table td:first-child {
+            color: #2c5aa0;
+            font-weight: 600;
+        }
+
+        /* Why Choose Us Section */
+        .benefits-list {
+            margin: 3rem 0;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2.5rem;
+            gap: 1.5rem;
+        }
+
+        .benefit-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .benefit-icon {
+            flex-shrink: 0;
+            margin-top: 0.2rem;
+        }
+
+        .icon-circle {
+            width: 40px;
+            height: 40px;
+            background: #f39c12;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .benefit-content h3 {
+            font-size: 1.3rem;
+            color: #2c5aa0;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .benefit-content p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #555;
+            margin: 0;
+        }
+
+        /* Projects Gallery */
+        .projects-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .company-badge {
+            display: inline-block;
+            background: #f39c12;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            aspect-ratio: 1;
+            background: #f8f9fa;
+        }
+
+        .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .project-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .project-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 1.5rem 1rem 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .project-item:hover .project-overlay {
+            transform: translateY(0);
+        }
+
+        .project-info h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: white;
+        }
+
+        .project-info p {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #2c5aa0 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .contact-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+
+        /* Footer - Updated to match index.html */
+        .footer {
+            background: #1e3a5f;
+            color: white;
+            padding: 40px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: white;
+            font-weight: 600;
+        }
+
+        .footer-description {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin: 1rem 0;
+            opacity: 0.9;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: #f39c12;
+            transform: translateY(-2px);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: #f39c12;
+        }
+
+        .contact-details p {
+            margin-bottom: 0.6rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .contact-details strong {
+            color: #f39c12;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            opacity: 0.7;
+            font-size: 0.85rem;
+        }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 1000;
+        }
+
+        .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 55px;
+            height: 55px;
+            background: #25D366;
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.8);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .nav-menu {
+                gap: 1.5rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.2rem;
+            }
+
+            .slide-item {
+                flex: 0 0 240px;
+                height: 160px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 2rem 0;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: all 0.3s ease;
+                pointer-events: none;
+                max-height: 80vh;
+                overflow-y: auto;
+                z-index: 999;
+            }
+
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            .nav-menu>li {
+                margin: 0;
+                padding: 0 2rem;
+                width: 100%;
+            }
+
+            .nav-menu>li>a {
+                padding: 15px 0;
+                display: block;
+                font-size: 1.1rem;
+                border-bottom: 1px solid #f0f0f0;
+            }
+
+            /* Mobile Dropdown */
+            .dropdown-menu {
+                position: static;
+                background: #f8f9fa;
+                box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                margin: 0;
+                border-radius: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease, padding 0.3s ease;
+                width: 100%;
+                border: none;
+                padding: 0;
+            }
+
+            .dropdown.active .dropdown-menu {
+                max-height: 300px;
+                padding: 0.5rem 0;
+            }
+
+            .dropdown-menu a {
+                padding: 12px 30px !important;
+                font-size: 1rem;
+                color: #555 !important;
+                border-bottom: 1px solid #e0e0e0;
+                background: transparent;
+            }
+
+            .dropdown-menu a:hover {
+                background: #e9ecef !important;
+                color: #2c5aa0 !important;
+            }
+
+            .dropdown-toggle {
+                padding: 15px 0;
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .hero {
+                background-attachment: scroll;
+                padding-top: 100px;
+            }
+
+            .section {
+                padding: 40px 0;
+            }
+
+            .service-block {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                margin-bottom: 4rem;
+            }
+
+            .service-block.reverse {
+                direction: ltr;
+            }
+
+            .service-content {
+                padding: 1rem;
+                order: 2;
+                text-align: center;
+            }
+
+            .service-image {
+                order: 1;
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+
+            .slide-item {
+                flex: 0 0 200px;
+                height: 140px;
+            }
+
+            .slider-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+            }
+
+            .prev-btn {
+                left: 10px;
+            }
+
+            .next-btn {
+                right: 10px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                text-align: center;
+            }
+
+            .footer-section:first-child {
+                margin-bottom: 1rem;
+            }
+
+            .contact-info iframe {
+                width: 100%;
+                max-width: 300px;
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 0.5rem;
+            }
+
+            .nav-container {
+                padding: 0 0.5rem;
+            }
+
+            .logo img {
+                width: 35px;
+                height: 35px;
+            }
+
+            .logo-text {
+                font-size: 1.1rem;
+            }
+
+            .logo-subtitle {
+                font-size: 0.65rem;
+            }
+
+            .hero-content {
+                padding: 1.5rem 0.5rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 250px;
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+
+            .slider-container {
+                padding: 1rem;
+            }
+
+            .slide-item {
+                flex: 0 0 160px;
+                height: 120px;
+            }
+
+            .slider-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+
+            .prev-btn {
+                left: 5px;
+            }
+
+            .next-btn {
+                right: 5px;
+            }
+
+            .service-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .service-content p {
+                font-size: 1rem;
+            }
+
+            .service-buttons {
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-buttons .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.8rem;
+            }
+
+            .contact-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .whatsapp-btn {
+                width: 50px;
+                height: 50px;
+            }
+
+            .footer {
+                padding: 30px 0 15px;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            /* Mobile Responsive Table */
+            .pricing-table-wrapper {
+                margin: 0 1rem 2rem;
+                border-radius: 10px;
+                background: white;
+                padding: 1.5rem;
+            }
+
+            .pricing-table,
+            .pricing-table thead,
+            .pricing-table tbody,
+            .pricing-table th,
+            .pricing-table td,
+            .pricing-table tr {
+                display: block;
+            }
+
+            .pricing-table thead {
+                display: none;
+            }
+
+            .pricing-table tr {
+                background: white;
+                border: 1px solid #e0e0e0;
+                margin-bottom: 1rem;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                padding: 0;
+            }
+
+            .pricing-table tr:last-child {
+                margin-bottom: 0;
+            }
+
+            .pricing-table td {
+                border: none;
+                border-bottom: 1px solid #f0f0f0;
+                position: relative;
+                padding: 0.8rem 1rem;
+                text-align: left;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .pricing-table td:last-child {
+                border-bottom: none;
+            }
+
+            .pricing-table td:before {
+                content: attr(data-label);
+                font-weight: 600;
+                color: #2c5aa0;
+                font-size: 0.85rem;
+                margin-right: 1rem;
+                flex: 1;
+            }
+        }
+
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-1 {
+            margin-bottom: 1rem;
+        }
+
+        .mb-2 {
+            margin-bottom: 2rem;
+        }
+
+        .mt-1 {
+            margin-top: 1rem;
+        }
+
+        .mt-2 {
+            margin-top: 2rem;
+        }
+
+        /* Focus styles for accessibility */
+        .btn:focus,
+        .nav-menu a:focus,
+        .mobile-menu-toggle:focus {
+            outline: 2px solid #f39c12;
+            outline-offset: 2px;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Logo">
+                <div>
+                    <div class="logo-text">Aluminium and Glass Works Dubai</div>
+                    <div class="logo-subtitle">BAB AL RAYYAN METAL DOORS &WINDOWS MAKING</div>
+                </div>
+            </a>
+
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Aluminium <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="page1.html">Aluminium Doors</a></li>
+                            <li><a href="page2.html">Aluminium Windows</a></li>
+                            <li><a href="page3.html">Aluminium Pergola</a></li>
+                            <li><a href="page4.html">Bifold Doors</a></li>
+                            <li><a href="page9.html">Pet Doors</a></li>
+                            <li><a href="page11.html">Aluminium Fence</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Glass <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="page7.html" class="active">Shower Glass</a></li>
+                            <li><a href="page6.html">Glass Partition</a></li>
+                            <li><a href="page5.html">Glass Room</a></li>
+                            <li><a href="page8.html">Glass Railing</a></li>
+<li><a href="page10.html">Fly Screens</a></li>
+                                                       <li><a href="page12.html">Glass Mirror</a></li>
+                            <li><a href="page13.html">Louver Box</a></li>                                </ul>
+                    </li>
+                    <li><a href="tel:+971588806498">Contact us</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    ☰
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Glass Partition Dubai</h1>
+            <h2>Top Rated room dividers for home & Offices</h2>
+
+            <p class="hero-description">
+                Seeking a brighter, more functional space in your Dubai office, villa, or commercial property? 
+                , your
+                trusted glass partition and <span class="highlight">shower glass</span> expert in Dubai, can help. Our
+                innovative, high-quality glass partitions bring the
+                perfect blend of light, style, and functionality to any space. Say goodbye to cramped, dark areas and
+                hello to a more open,
+                inviting environment that inspires productivity and showcases your unique style.
+            </p>
+
+            <p class="hero-cta">
+                Get in touch with the leading glass partition manufacturer in UAE for advice and quotes on your next
+                partition
+                project, renovation or installation.
+            </p>
+
+            <div class="cta-buttons">
+                <a href="#pricing" class="btn btn-primary">
+                    Prices starting from only<br>
+                    <strong>AED 180</strong>
+                </a>
+                <a href="tel:+971588806498" class="btn btn-secondary">
+                    Get a free quote today<br>
+                    <strong>  971588806498</strong>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section" style="background: #f8f9fa;" id="products">
+        <div class="container">
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <div class="slider-track" id="sliderTrack">
+                        <div class="slide-item">
+                            <img src="gp/2.png" alt="Clear Glass Partition">
+                        </div>
+                        <div class="slide-item">
+                            <img src="gp/6.png" alt="Office Glazed Glass Folding Wall Partition">
+                        </div>
+                        <div class="slide-item">
+                            <img src="gp/2.png" alt="Frameless Glass Wall Partition">
+                        </div>
+                        <div class="slide-item">
+                            <img src="gp/6.png" alt="Office Smart Glass Wall Cabins">
+                        </div>
+                        <div class="slide-item">
+                            <img src="gp/7.png" alt="Double Glass Partition">
+                        </div>
+                        <div class="slide-item">
+                            <img src="gp/8.png" alt="Acoustic Glass Partition">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="slider-btn prev-btn" id="prevBtn">‹</button>
+                <button class="slider-btn next-btn" id="nextBtn">›</button>
+
+                <div class="slider-dots" id="sliderDots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                    <span class="dot" data-slide="4"></span>
+                    <span class="dot" data-slide="5"></span>
+                </div>
+            </div>
+
+            <div class="section-header">
+                <h2 class="section-title">Bespoke Glass Partition Solutions for your office or residential space in
+                    Dubai, UAE</h2>
+                <p class="section-text">
+                    From frameless glass partitions and doors for offices, to performance glazed fire screens, to glass
+                    for a residential balcony...
+                    we've got it. <span class="highlight">BAB AL RAYYAN METAL DOORS &WINDOWS MAKINGwood</span>, the top-rated glass partition
+                    construction company in Dubai and UAE, offers the perfect solution. We
+                    use only the highest quality materials ensuring your glass partitions are both beautiful and
+                    durable.
+                </p>
+
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                    <a href="#about" class="btn btn-primary">READ MORE ABOUT US</a>
+                    <a href="tel:+971588806498" class="btn btn-secondary">ENQUIRE NOW</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <!-- First Service Block -->
+            <div class="service-block">
+                <div class="service-content">
+                    <h2>Glass Partitions for the Offices in Dubai</h2>
+                    <p>
+                        For over 25 years, BAB AL RAYYAN METAL DOORS &WINDOWS MAKINGwood supplies and installs a luxury line of European style interior
+                        glass wall partition systems. Each
+                        architectural glass system is specialized to efficiently divide and organize a variety of
+                        interior commercial spaces such as offices.
+                    </p>
+
+                    <ul class="service-list">
+                        <li>
+                            <span class="list-icon">⊕</span>
+                            <span>Frameless Office Partitions</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">⊕</span>
+                            <span>Double Glazed Office Glass Partitions</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">⊕</span>
+                            <span>Switchable Smart Glass Partitions</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">⊕</span>
+                            <span>Sliding Glass Partitions</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">⊕</span>
+                            <span>Acoustic Glass Partitioning</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">⊕</span>
+                            <span>Full Height Office Glass Partition</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">⊕</span>
+                            <span>Demountable Glass Partitions</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">⊕</span>
+                            <span>Glass Partition Walls</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">⊕</span>
+                            <span>Glass Doors & Windows</span>
+                        </li>
+                    </ul>
+
+                    <div class="service-buttons">
+                        <a href="tel:+971588806498" class="btn btn-primary">Contact Us</a>
+                        <a href="https://wa.me/971588806498" class="btn btn-secondary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                                style="margin-right: 8px;">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516" />
+                            </svg>
+                            Inquiry via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-image">
+                    <img src="gp/6.png" alt="Glass Partitions for Offices Dubai">
+                </div>
+            </div>
+
+            <!-- Second Service Block -->
+            <div class="service-block reverse">
+                <div class="service-image">
+                    <img src="gp/2.png" alt="Glass Partitions for Home Dubai">
+                </div>
+
+                <div class="service-content">
+                    <h2>Glass Partitions & Glass Room Dividers For Your Home in Dubai</h2>
+                    <p>
+                        Glass partitioning is the ideal way to create a contemporary atmosphere in any residential
+                        environment by allowing natural
+                        light flood into your living area.
+                    </p>
+
+                    <ul class="service-list">
+                        <li>
+                            <span class="list-icon">⊕</span>
+                            <span>Frameless Home Glass Partitions</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">⊕</span>
+                            <span>Frosted Glass Partitions</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">⊕</span>
+                            <span>Sliding Glass Partitions</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">⊕</span>
+                            <span>Glass Wall Partitioning For Your Home</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">⊕</span>
+                            <span>Fire Rated Glass Partitions</span>
+                        </li>
+                    </ul>
+
+                    <div class="service-buttons">
+                        <a href="tel:+971588806498" class="btn btn-primary">Contact Us</a>
+                        <a href="https://wa.me/971588806498" class="btn btn-secondary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                                style="margin-right: 8px;">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516" />
+                            </svg>
+                            Inquiry via WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section pricing-section" id="pricing">
+        <div class="container">
+            <div class="pricing-content">
+                <div class="section-header">
+                    <h2 class="section-title">How much does a glass partition cost in Dubai, UAE?</h2>
+                    <p class="section-text">
+                        Installing stunning glass office partitions or home dividers in Dubai need not break the bank.
+                        Pricing is dependent on size, design
+                        complexity, accessibility and customization.
+                    </p>
+                </div>
+
+                <div class="pricing-table-wrapper">
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th>Door Material</th>
+                                <th>Design</th>
+                                <th>Cost per sq.m</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Door Material">FIX PARTITION WITH U-CHANNEL</td>
+                                <td data-label="Design">BASIC</td>
+                                <td data-label="Cost per sq.m">AED 340</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Door Material">SWING DOOR WITH FLOOR MACHINE</td>
+                                <td data-label="Design">BASIC</td>
+                                <td data-label="Cost per sq.m">AED 1450 PER DOOR</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Door Material">Glass Single Glazed Normal Channels</td>
+                                <td data-label="Design">10 mm clear, polished & tempered glass</td>
+                                <td data-label="Cost per sq.m">AED 399</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Door Material">Single Glazed Custom U Channels</td>
+                                <td data-label="Design">10 mm clear, polished & tempered glass</td>
+                                <td data-label="Cost per sq.m">AED 499</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Door Material">Double Glazed Custom U Channels</td>
+                                <td data-label="Design">2* 6 mm clear, polished & tempered glass</td>
+                                <td data-label="Cost per sq.m">AED 699</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Door Material">Aluminium Framed Glass Partitions</td>
+                                <td data-label="Design">CUSTOMISED</td>
+                                <td data-label="Cost per sq.m">AED 180 - 350</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p style="font-style: italic; color: #666; margin: 2rem 0; font-size: 1rem;">
+                    <em>BAB AL RAYYAN METAL DOORS &WINDOWS MAKINGwood is the UAE's emerging website for office and glass partitions in Dubai. Call
+                        +971588806498</em>
+                </p>
+
+                <div style="margin-top: 2rem;">
+                    <a href="tel:+971588806498" class="btn btn-primary">GET A FREE ESTIMATE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);" id="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why choose us for #1 Glass Partitions across UAE</h2>
+
+                <p class="section-text">
+                    Looking for a trusted glass partition construction company in Dubai? Look no further than 
+                    ! We're the top-rated glass
+                    partition contractor in Dubai and the surrounding areas, offering exceptional service and
+                    top-quality products. Here's why we should be
+                    your partner for your next project:
+                </p>
+            </div>
+
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <span class="icon-circle">✓</span>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Unmatched Expertise:</h3>
+                        <p>With over 25 years of experience, we're a leading glass partition manufacturer and supplier
+                            in Dubai. Our team
+                            of skilled professionals is passionate about creating beautiful and functional glass
+                            solutions for your space.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <span class="icon-circle">✓</span>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Unbeatable Quality:</h3>
+                        <p>We use only the finest materials to ensure your partitions are durable, safe, and built to
+                            last. We adhere to the
+                            strictest safety standards, giving you peace of mind. These partitions have great benefits
+                            compared to wall or brick partitions.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <span class="icon-circle">✓</span>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Local Expertise:</h3>
+                        <p>We understand the unique requirements of the Dubai market and offer solutions tailored to
+                            local building codes and
+                            regulations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="section-text text-center mt-2">
+                From design consultation to expert installation, BAB AL RAYYAN METAL DOORS &WINDOWS MAKINGwood is your one-stop shop for all your
+                partition needs. We're committed to
+                exceeding your expectations and creating a space you'll love.
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects Gallery Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="projects-header">
+                <div class="company-badge">BAB AL RAYYAN METAL DOORS &WINDOWS MAKINGWOOD</div>
+                <h2 class="section-title">RECENT COMPLETED<br>GLASS PARTITION PROJECTS</h2>
+                <a href="tel:+971588806498" class="btn btn-primary">VIEW ALL PROJECTS</a>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-item">
+                    <img src="gp/1.png" alt="Glass Partition Project 1" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info"></div>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="gp/2.png" alt="Glass Partition Project 2" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info"></div>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="gp/3.png" alt="Glass Partition Project 3" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info"></div>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="gp/3.jpg" alt="Glass Partition Project 3B" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info"></div>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="gp/4.png" alt="Glass Partition Project 4" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info"></div>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="gp/5.png" alt="Glass Partition Project 5" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info"></div>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="gp/6.png" alt="Glass Partition Project 6" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info"></div>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="gp/7.png" alt="Glass Partition Project 7" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info"></div>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="gp/8.png" alt="Glass Partition Project 8" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info"></div>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="gp/9.png" alt="Glass Partition Project 9" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info"></div>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="gp/10.png" alt="Glass Partition Project 10" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info"></div>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="gp/11.png" alt="Glass Partition Project 11" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info"></div>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="gp/12.png" alt="Glass Partition Project 12" loading="lazy">
+                    <div class="project-overlay">
+                        <div class="project-info"></div>
+                    </div>
+                </div>
+               
+            </div>
+
+
+            <div class="text-center mt-2">
+                <a href="tel:+971588806498" class="btn btn-secondary">VIEW MORE PROJECTS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Get Free Consultation! Contact us</h2>
+                <p>
+                    Whenever you are going to find the <span class="highlight">best glass partition services</span> in
+                    Dubai, Burdubai& Abu Dhabi, make sure to consider us. We are here
+                    providing you a lot of benefits to choose us. You will get 100% satisfaction with our professional
+                    expertise in glass & partition contracting.
+                </p>
+                <p>
+                    Our team of experts is here to help you with all your glass partition needs, from choosing the
+                    perfect style to professional installation. We
+                    even offer emergency repair services, so you'll never be left stranded.
+                </p>
+                <p>
+                    Get a free quote today and see how BAB AL RAYYAN METAL DOORS &WINDOWS MAKINGwood can transform your space with stunning glass
+                    partitions!
+                </p>
+                <a href="tel:+971588806498" class="btn btn-primary">CALL NOW</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo">
+                            <img src="logo.png" alt="Logo" width="50px">
+                            <div>
+                                <div class="logo-text">Aluminium and Glass Works Dubai</div>
+                                <div class="logo-subtitle">BAB AL RAYYAN METAL DOORS &WINDOWS MAKING</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Aluminium and Glass Works Dubai, established in 2000, is a leading UAE-based glass and aluminum
+                        contracting
+                        company providing installation services and quality products across the Emirates for over a
+                        decade.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/971588806498" class="social-link" aria-label="WhatsApp">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="tel:+971588806498">Contact Us</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Aluminium</h3>
+                    <ul class="footer-links">
+                        <li><a href="page1.html">Aluminium Doors</a></li>
+                        <li><a href="page2.html">Aluminium Windows</a></li>
+                        <li><a href="page3.html">Aluminium Pergola</a></li>
+                        <li><a href="page4.html">Bifold Doors</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Glass</h3>
+                    <ul class="footer-links">
+                        <li><a href="page7.html">Shower Glass</a></li>
+                        <li><a href="page6.html">Glass Partition</a></li>
+                        <li><a href="page5.html">Glass Room</a></li>
+                        <li><a href="page8.html">Glass Railing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section contact-info">
+                    <h3>Contact</h3>
+                    <div class="contact-map mb-1">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.7!2d55.5!3d25.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDI0JzAwLjAiTiA1NcKwMzAnMDAuMCJF!5e0!3m2!1sen!2sae!4v1234567890"
+                            width="100%" height="120" style="border:0; border-radius: 8px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="contact-details">
+                        <p><strong>+971588806498</strong></p>
+                        <p>Shop no 8, Near Storia Hotel Meena Bazar<br>Industrial Area - Burdubai- United Arab Emirates
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Copyright © 2024 - BAB AL RAYYAN METAL DOORS &WINDOWS MAKING</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/971588806498" target="_blank" class="whatsapp-btn" aria-label="Contact via WhatsApp">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516" />
+            </svg>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu functionality
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        function toggleMobileMenu() {
+            navMenu.classList.toggle('active');
+            mobileMenuToggle.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+
+            // Close all dropdowns when toggling mobile menu
+            document.querySelectorAll('.dropdown').forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
+
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+
+        // Dropdown functionality
+        function initializeDropdowns() {
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            dropdowns.forEach(dropdown => {
+                const toggle = dropdown.querySelector('.dropdown-toggle');
+                const menu = dropdown.querySelector('.dropdown-menu');
+
+                if (toggle && menu) {
+                    // Remove any existing event listeners
+                    toggle.removeEventListener('click', handleDropdownClick);
+
+                    // Add click event listener
+                    toggle.addEventListener('click', handleDropdownClick);
+
+                    // Add hover events for desktop
+                    if (window.innerWidth > 768) {
+                        dropdown.addEventListener('mouseenter', () => {
+                            closeAllDropdowns();
+                            dropdown.classList.add('active');
+                        });
+
+                        dropdown.addEventListener('mouseleave', () => {
+                            dropdown.classList.remove('active');
+                        });
+                    }
+                }
+            });
+        }
+
+        function handleDropdownClick(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const dropdown = e.target.closest('.dropdown');
+            const isActive = dropdown.classList.contains('active');
+
+            // Close all other dropdowns
+            closeAllDropdowns();
+
+            // Toggle current dropdown
+            if (!isActive) {
+                dropdown.classList.add('active');
+            }
+        }
+
+        function closeAllDropdowns() {
+            document.querySelectorAll('.dropdown').forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
+
+        function closeMobileMenu() {
+            navMenu.classList.remove('active');
+            mobileMenuToggle.textContent = '☰';
+            closeAllDropdowns();
+        }
+
+        // Close dropdown/menu when clicking outside
+        document.addEventListener('click', (e) => {
+            // Close dropdowns if clicking outside
+            if (!e.target.closest('.dropdown')) {
+                closeAllDropdowns();
+            }
+
+            // Close mobile menu if clicking outside nav
+            if (!e.target.closest('.nav-container')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close mobile menu when clicking nav links (but not dropdown toggles)
+        document.querySelectorAll('.nav-menu a:not(.dropdown-toggle)').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Close dropdown when clicking dropdown menu items
+        document.querySelectorAll('.dropdown-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                closeAllDropdowns();
+                closeMobileMenu();
+            });
+        });
+
+        // Handle window resize
+        function handleResize() {
+            if (window.innerWidth > 768) {
+                // Desktop: close mobile menu and reinitialize dropdowns
+                closeMobileMenu();
+                initializeDropdowns();
+            } else {
+                // Mobile: remove hover events and reinitialize
+                document.querySelectorAll('.dropdown').forEach(dropdown => {
+                    dropdown.removeEventListener('mouseenter', () => { });
+                    dropdown.removeEventListener('mouseleave', () => { });
+                });
+                initializeDropdowns();
+            }
+        }
+
+        // Initialize dropdowns on load
+        initializeDropdowns();
+
+        // Reinitialize on resize with debounce
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(handleResize, 250);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Slider functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide-item');
+        const dots = document.querySelectorAll('#sliderDots .dot');
+        const sliderTrack = document.getElementById('sliderTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function getVisibleSlides() {
+            const containerWidth = document.querySelector('.slider-container').offsetWidth;
+            const slideWidth = 280;
+            const gap = 15;
+            return Math.floor((containerWidth + gap) / (slideWidth + gap));
+        }
+
+        function updateSlider() {
+            const visibleSlides = getVisibleSlides();
+            const maxSlide = Math.max(0, slides.length - visibleSlides);
+
+            currentSlide = Math.min(currentSlide, maxSlide);
+
+            const slideWidth = 280;
+            const gap = 15;
+            const translateX = -currentSlide * (slideWidth + gap);
+            sliderTrack.style.transform = `translateX(${translateX}px)`;
+
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function nextSlide() {
+            const visibleSlides = getVisibleSlides();
+            const maxSlide = Math.max(0, slides.length - visibleSlides);
+            currentSlide = currentSlide >= maxSlide ? 0 : currentSlide + 1;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            const visibleSlides = getVisibleSlides();
+            const maxSlide = Math.max(0, slides.length - visibleSlides);
+            currentSlide = currentSlide <= 0 ? maxSlide : currentSlide - 1;
+            updateSlider();
+        }
+
+        // Event listeners for slider
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                updateSlider();
+            });
+        });
+
+        // Auto-play
+        let autoplayInterval = setInterval(nextSlide, 4000);
+        const sliderContainer = document.querySelector('.slider-container');
+
+        sliderContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoplayInterval);
+        });
+
+        sliderContainer.addEventListener('mouseleave', () => {
+            autoplayInterval = setInterval(nextSlide, 4000);
+        });
+
+        // Touch support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        sliderContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        sliderContainer.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) nextSlide();
+            if (touchEndX > touchStartX + 50) prevSlide();
+        }
+
+        // Initialize and handle resize
+        updateSlider();
+        window.addEventListener('resize', updateSlider);
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.project-item, .benefit-item, .service-block').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Lazy loading for images
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[data-src]');
+            images.forEach(img => {
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+            });
+        } else {
+            // Fallback for browsers that don't support lazy loading
+            const lazyImages = document.querySelectorAll('img[data-src]');
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            lazyImages.forEach(img => imageObserver.observe(img));
+        }
+
+        // Performance optimization - debounce scroll and resize events
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        const debouncedResize = debounce(updateSlider, 250);
+        window.addEventListener('resize', debouncedResize);
+    </script>
+</body>

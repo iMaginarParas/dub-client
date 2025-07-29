@@ -1,0 +1,2323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluminium and Glass Works Dubai</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="mobile-call-button.css">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header Styles */
+        .header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 0.5rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo img {
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c5aa0;
+            line-height: 1.2;
+        }
+
+        .logo-subtitle {
+            font-size: 0.75rem;
+            color: #f39c12;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: #f39c12;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #f39c12;
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
+            width: 100%;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .dropdown-arrow {
+            font-size: 0.7rem;
+            transition: transform 0.3s ease;
+            color: #666;
+        }
+
+        .dropdown.active .dropdown-arrow {
+            transform: rotate(180deg);
+            color: #f39c12;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+            background: white;
+            min-width: 220px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            list-style: none;
+            padding: 0.5rem 0;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .dropdown.active .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 20px;
+            color: #2c5aa0 !important;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu a:hover {
+            background: #f39c12;
+            color: white !important;
+        }
+
+        .dropdown-menu a::after {
+            display: none !important;
+        }
+
+        /* Desktop hover effects */
+        @media (min-width: 769px) {
+            .dropdown:hover .dropdown-menu {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+            .dropdown:hover .dropdown-arrow {
+                transform: rotate(180deg);
+                color: #f39c12;
+            }
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #2c5aa0;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-toggle:hover {
+            background: rgba(243, 156, 18, 0.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            padding: 0 1rem;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            opacity: 0.95;
+            line-height: 1.4;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            min-width: 140px;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-primary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.8);
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-whatsapp:hover {
+            background: #22c55e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        .service-categories {
+            margin-top: 2rem;
+        }
+
+        .service-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .service-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            justify-content: center;
+        }
+
+        .service-btn {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            backdrop-filter: blur(10px);
+        }
+
+        .service-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.6);
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 3rem;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: #f39c12;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: #2c5aa0;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .section-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* Slider */
+        .slider-container {
+            position: relative;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            border-radius: 15px;
+            background: white;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .slider-wrapper {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            gap: 15px;
+        }
+
+        .slide-item {
+            flex: 0 0 280px;
+            height: 180px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .slide-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .slide-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .slide-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            font-size: 1.3rem;
+            color: #2c5aa0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .slider-btn:hover {
+            background: white;
+            color: #f39c12;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .prev-btn {
+            left: 15px;
+        }
+
+        .next-btn {
+            right: 15px;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: #f39c12;
+            transform: scale(1.2);
+        }
+
+        .price-badge {
+            text-align: center;
+            margin: 1.5rem 0;
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 700;
+            color: #2c5aa0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: transparent;
+            border: 2px solid #2c5aa0;
+            color: #2c5aa0;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-button:hover {
+            background: #f39c12;
+            border-color: #f39c12;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4);
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .stats-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            height: 40%;
+        }
+
+        .stat-item {
+            text-align: center;
+            color: white;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 0.3rem;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .process-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+        }
+
+        .process-step {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #f39c12;
+        }
+
+        .step-icon {
+            width: 20px;
+            height: 20px;
+            background: #f39c12;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-text {
+            font-size: 0.9rem;
+            color: #2c5aa0;
+            font-weight: 500;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            height: 220px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-image {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.1);
+        }
+
+        .service-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            padding: 1.5rem;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            height: 100%;
+        }
+
+        .service-overlay h3 {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-overlay h3 {
+            color: #f39c12;
+            transform: translateY(-5px);
+        }
+
+        /* Projects Grid */
+        .projects-content {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .projects-text {
+            position: sticky;
+            top: 120px;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .project-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            aspect-ratio: 1;
+        }
+
+        .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .project-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .view-all-btn {
+            display: inline-block;
+            background: #f39c12;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .view-all-btn:hover {
+            background: #e67e22;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4);
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .testimonial-content p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #2c5aa0;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-author {
+            font-size: 0.9rem;
+            color: #333;
+            font-weight: 600;
+            text-align: right;
+        }
+
+        /* Service Areas */
+        .service-areas-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .locations-list {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 4px solid #f39c12;
+        }
+
+        .locations-list h3 {
+            font-size: 1.2rem;
+            color: #2c5aa0;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .location-item {
+            margin-bottom: 0.8rem;
+            padding: 0.8rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .location-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .location-item h4 {
+            font-size: 0.9rem;
+            color: #2c5aa0;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .map-container {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-overlay {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: white;
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .map-label {
+            font-size: 0.9rem;
+            color: #2c5aa0;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .map-link {
+            font-size: 0.8rem;
+            color: #f39c12;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1e3a5f;
+            color: white;
+            padding: 40px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: white;
+            font-weight: 600;
+        }
+
+        .footer-description {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin: 1rem 0;
+            opacity: 0.9;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: #f39c12;
+            transform: translateY(-2px);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: #f39c12;
+        }
+
+        .contact-details p {
+            margin-bottom: 0.6rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .contact-details strong {
+            color: #f39c12;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            opacity: 0.7;
+            font-size: 0.85rem;
+        }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 1000;
+        }
+
+        .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 55px;
+            height: 55px;
+            background: #25D366;
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.8);
+            }
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            background: linear-gradient(135deg, #e8f4f8 0%, #f1f8fc 100%);
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .cta-banner p {
+            font-size: 1.1rem;
+            color: #2c5aa0;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .nav-menu {
+                gap: 1.5rem;
+            }
+
+            .about-content,
+            .service-areas-content {
+                gap: 2rem;
+            }
+
+            .projects-content {
+                grid-template-columns: 250px 1fr;
+                gap: 2rem;
+            }
+
+            .slide-item {
+                flex: 0 0 240px;
+                height: 160px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 2rem 0;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: all 0.3s ease;
+                pointer-events: none;
+                max-height: 80vh;
+                overflow-y: auto;
+                z-index: 999;
+            }
+
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            .nav-menu>li {
+                margin: 0;
+                padding: 0 2rem;
+                width: 100%;
+            }
+
+            .nav-menu>li>a {
+                padding: 15px 0;
+                display: block;
+                font-size: 1.1rem;
+                border-bottom: 1px solid #f0f0f0;
+            }
+
+            /* Mobile Dropdown */
+            .dropdown-menu {
+                position: static;
+                background: #f8f9fa;
+                box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                margin: 0;
+                border-radius: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease, padding 0.3s ease;
+                width: 100%;
+                border: none;
+                padding: 0;
+            }
+
+            .dropdown.active .dropdown-menu {
+                max-height: 300px;
+                padding: 0.5rem 0;
+            }
+
+            .dropdown-menu a {
+                padding: 12px 30px !important;
+                font-size: 1rem;
+                color: #555 !important;
+                border-bottom: 1px solid #e0e0e0;
+                background: transparent;
+            }
+
+            .dropdown-menu a:hover {
+                background: #e9ecef !important;
+                color: #2c5aa0 !important;
+            }
+
+            .dropdown-menu a:last-child {
+                border-bottom: none;
+            }
+
+            /* Make dropdown toggles more touch-friendly on mobile */
+            .dropdown-toggle {
+                padding: 15px 0;
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .dropdown-arrow {
+                font-size: 0.8rem;
+                margin-left: auto;
+            }
+
+            .logo-text {
+                font-size: 1.3rem;
+            }
+
+            .logo-subtitle {
+                font-size: 0.7rem;
+            }
+
+            .hero {
+                padding-top: 100px;
+                background-attachment: scroll;
+            }
+
+            .section {
+                padding: 40px 0;
+            }
+
+            .about-content,
+            .service-areas-content,
+            .projects-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .projects-text {
+                position: static;
+                margin-bottom: 1rem;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1rem;
+            }
+
+            .service-card {
+                height: 180px;
+            }
+
+            .slide-item {
+                flex: 0 0 200px;
+                height: 140px;
+            }
+
+            .slider-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+            }
+
+            .prev-btn {
+                left: 10px;
+            }
+
+            .next-btn {
+                right: 10px;
+            }
+
+            .stats-overlay {
+                padding: 1rem;
+            }
+
+            .stat-number {
+                font-size: 1.6rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                text-align: center;
+            }
+
+            .footer-section:first-child {
+                margin-bottom: 1rem;
+            }
+
+            .contact-info iframe {
+                width: 100%;
+                max-width: 300px;
+                height: 200px;
+            }
+
+            .cta-banner p {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 0.5rem;
+            }
+
+            .nav-container {
+                padding: 0 0.5rem;
+            }
+
+            .logo img {
+                width: 35px;
+                height: 35px;
+            }
+
+            .logo-text {
+                font-size: 1.1rem;
+            }
+
+            .logo-subtitle {
+                font-size: 0.65rem;
+            }
+
+            .hero-content {
+                padding: 1.5rem 0.5rem;
+            }
+
+            .hero-badge {
+                font-size: 0.8rem;
+                padding: 0.6rem 1rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 250px;
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+
+            .service-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-btn {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+                padding: 10px 16px;
+                font-size: 0.8rem;
+            }
+
+            .slider-container {
+                padding: 1rem;
+            }
+
+            .slide-item {
+                flex: 0 0 160px;
+                height: 120px;
+            }
+
+            .slider-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+
+            .prev-btn {
+                left: 5px;
+            }
+
+            .next-btn {
+                right: 5px;
+            }
+
+            .services-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .service-card {
+                height: 160px;
+            }
+
+            .service-overlay {
+                padding: 1rem;
+            }
+
+            .service-overlay h3 {
+                font-size: 1.1rem;
+            }
+
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.8rem;
+            }
+
+            .project-item {
+                border-radius: 8px;
+            }
+
+            .stats-overlay {
+                flex-direction: column;
+                gap: 0.8rem;
+                align-items: center;
+                padding: 1rem;
+            }
+
+            .stat-item {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .stat-number {
+                font-size: 1.4rem;
+            }
+
+            .stat-label {
+                font-size: 0.8rem;
+            }
+
+            .process-steps {
+                gap: 0.6rem;
+            }
+
+            .process-step {
+                padding: 0.6rem;
+            }
+
+            .step-text {
+                font-size: 0.85rem;
+            }
+
+            .locations-list {
+                padding: 1rem;
+            }
+
+            .location-item {
+                padding: 0.6rem;
+            }
+
+            .location-item h4 {
+                font-size: 0.85rem;
+            }
+
+            .map-container iframe {
+                height: 200px;
+            }
+
+            .map-overlay {
+                top: 10px;
+                left: 10px;
+                padding: 0.6rem 0.8rem;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .whatsapp-btn {
+                width: 50px;
+                height: 50px;
+            }
+
+            .cta-banner p {
+                font-size: 0.9rem;
+                padding: 0 0.5rem;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 280px;
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .footer {
+                padding: 30px 0 15px;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-1 {
+            margin-bottom: 1rem;
+        }
+
+        .mb-2 {
+            margin-bottom: 2rem;
+        }
+
+        .mt-1 {
+            margin-top: 1rem;
+        }
+
+        .mt-2 {
+            margin-top: 2rem;
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Focus styles for accessibility */
+        .btn:focus,
+        .nav-menu a:focus,
+        .mobile-menu-toggle:focus {
+            outline: 2px solid #f39c12;
+            outline-offset: 2px;
+        }
+
+        /* Loading animation for images */
+        .slide-item img,
+        .service-image img,
+        .project-item img {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Logo">
+                <div>
+                    <div class="logo-text">Aluminium and Glass Works Dubai</div>
+                    <div class="logo-subtitle">BAB AL RAYYAN METAL DOORS &WINDOWS MAKING</div>
+                </div>
+            </a>
+
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Aluminium <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="page1.html">Aluminium Doors</a></li>
+                            <li><a href="page2.html">Aluminium Windows</a></li>
+                            <li><a href="page3.html">Aluminium Pergola</a></li>
+                            <li><a href="page4.html">Bifold Doors</a></li>
+                            <li><a href="page9.html">Pet Doors</a></li>
+                            <li><a href="page11.html">Aluminium Fence</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Glass <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="page7.html">Shower Glass</a></li>
+                            <li><a href="page5.html">Glass Partition</a></li>
+                            <li><a href="page6.html">Glass Room</a></li>
+                            <li><a href="page8.html">Glass Railing</a></li>
+                            <li><a href="page10.html">Fly Screens</a></li>
+                            <li><a href="page12.html">Glass Mirror</a></li>
+                            <li><a href="page13.html">Louver Box</a></li>                            
+
+
+
+                        </ul>
+                    </li>
+                    <li><a href="tel:+971588806498">Contact us</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    ☰
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">
+                #1 Glass & Aluminium Services Company Dubai
+            </div>
+
+            <h1>Transform Your Space with AGW Aluminium & Glass Experts</h1>
+
+            <p class="hero-subtitle">
+                25+ Years Delivering Premium Aluminium Doors, Glass Partitions, Windows, Pergolas & More for Homes and
+                Businesses Across Dubai and Nearby Cities
+            </p>
+
+            <div class="hero-cta">
+                <a href="tel:+971588806498" class="btn btn-primary">
+                    📞 CALL NOW
+                </a>
+                <a href="https://wa.me/971588806498" target="_blank" class="btn btn-whatsapp">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
+                    </svg> WHATSAPP
+                </a>
+            </div>
+
+            <div class="service-categories">
+                <div class="service-title">
+                    Explore our service ranges
+                </div>
+                <div class="service-buttons">
+                    <a href="page1.html" class="service-btn">ALUMINIUM DOORS</a>
+                    <a href="page6.html" class="service-btn">GLASS PARTITION</a>
+                    <a href="page5.html" class="service-btn">GLASS ROOM</a>
+                    <a href="page2.html" class="service-btn">WINDOWS</a>
+                    <a href="page3.html" class="service-btn">PERGOLA</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slider Section -->
+    <section class="section" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <div class="slider-track" id="sliderTrack">
+                        <div class="slide-item"><img src="ad.jpg" alt="Aluminium Doors" /></div>
+                        <div class="slide-item"><img src="ap.jpg" alt="Aluminium Pergola" /></div>
+                        <div class="slide-item"><img src="bd.jpg" alt="Bifold Doors" /></div>
+                        <div class="slide-item"><img src="gp.jpg" alt="Glass Partition" /></div>
+                        <div class="slide-item"><img src="sg.jpg" alt="Shower Glass" /></div>
+                        <div class="slide-item"><img src="aw.png" alt="Aluminium Windows" /></div>
+                    </div>
+                </div>
+
+                <button class="slider-btn prev-btn" id="prevBtn">‹</button>
+                <button class="slider-btn next-btn" id="nextBtn">›</button>
+
+                <div class="slider-dots" id="sliderDots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                    <span class="dot" data-slide="4"></span>
+                    <span class="dot" data-slide="5"></span>
+                </div>
+            </div>
+
+            <div class="price-badge">FROM ONLY 180 AED</div>
+            <div class="text-center">
+                <a href="#services" class="cta-button">
+                    Transform Your Villa with Luxurious Glass Room →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="ap.jpg" alt="About Building Projects">
+                    <div class="stats-overlay">
+                        <div class="stat-item">
+                            <div class="stat-number">14+</div>
+                            <div class="stat-label">Yrs Expertise</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">96%</div>
+                            <div class="stat-label">Success Rate</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label">Completed Projects</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <div class="section-badge">ABOUT US</div>
+                    <h2 class="section-title">Your Trusted Partner in Glass & Aluminium Industry</h2>
+
+                    <p class="section-text">At <strong>Aluminium and Glass Works Dubai</strong>, we don't just build –
+                        we create. With over <strong>25 years of expertise</strong>, we specialize in <strong>premium
+                            aluminium and glass solutions</strong>, bringing elegance and durability to homes and
+                        businesses across the UAE. From <strong>windows and doors to railings, glass rooms and
+                            pergolas</strong>, our skilled team delivers <strong>custom designs, flawless installations,
+                            and exceptional craftsmanship</strong>. Trust us to turn your vision into reality.
+                        <strong>Quality. Innovation. Excellence.</strong></p>
+
+                    <h3 style="font-size: 1.3rem; color: #2c5aa0; margin: 1.5rem 0 1rem; font-weight: 600;">Our Working
+                        Process</h3>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <span class="step-icon">✓</span>
+                            <span class="step-text">Meet & Inspire</span>
+                        </div>
+                        <div class="process-step">
+                            <span class="step-icon">✓</span>
+                            <span class="step-text">Concept and Design</span>
+                        </div>
+                        <div class="process-step">
+                            <span class="step-icon">✓</span>
+                            <span class="step-text">Authority Approvals</span>
+                        </div>
+                        <div class="process-step">
+                            <span class="step-icon">✓</span>
+                            <span class="step-text">Build & Deliver</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <p>Call +971588806498 for #1 Aluminium & Glass Consultation and Services in Dubai</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Glass & Aluminium Contracting Services</h2>
+                <p class="section-text">Our licensed company specializes in manufacturing and installing aluminium
+                    windows, doors, pergolas, railings and glass partitions, walls, enclosures, custom fabrication
+                    projects. We handle end-to-end fabrication and installation for residential and commercial
+                    properties in Dubai.</p>
+            </div>
+
+            <div class="services-grid">
+                <a href="page1.html" class="service-card">
+                    <div class="service-image">
+                        <img src="ad/17.png" alt="Aluminium Doors">
+                        <div class="service-overlay">
+                            <h3>Aluminium Doors →</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="page2.html" class="service-card">
+                    <div class="service-image">
+                        <img src="aw/6.png" alt="Aluminium Windows">
+                        <div class="service-overlay">
+                            <h3>Aluminium Windows →</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="page3.html" class="service-card">
+                    <div class="service-image">
+                        <img src="ap.jpg" alt="Aluminium Pergola">
+                        <div class="service-overlay">
+                            <h3>Aluminium Pergola →</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="page4.html" class="service-card">
+                    <div class="service-image">
+                        <img src="bd/1.png" alt="Bifolding Doors">
+                        <div class="service-overlay">
+                            <h3>Bifolding Doors →</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="page6.html" class="service-card">
+                    <div class="service-image">
+                        <img src="gp.jpg" alt="Glass Partition">
+                        <div class="service-overlay">
+                            <h3>Glass Partition →</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="page5.html" class="service-card">
+                    <div class="service-image">
+                        <img src="sg.jpg" alt="Shower Glass">
+                        <div class="service-overlay">
+                            <h3>Glass Room →</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="projects-content">
+                <div class="projects-text">
+                    <div class="section-badge">Aluminium and Glass Works Dubai</div>
+                    <h2 style="font-size: 1.5rem; color: #2c5aa0; margin-bottom: 1rem; font-weight: 700;">RECENT
+                        PROJECTS IN UAE</h2>
+                    <a href="#all-projects" class="view-all-btn">VIEW ALL PROJECTS</a>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-item"><img src="ad/17.png" alt="Project 1"></div>
+                    <div class="project-item"><img src="ad/13.png" alt="Project 2"></div>
+                    <div class="project-item"><img src="aw/6.png" alt="Project 3"></div>
+                    <div class="project-item"><img src="bd/1.png" alt="Project 4"></div>
+                    <div class="project-item"><img src="ad/11.png" alt="Project 5"></div>
+                    <div class="project-item"><img src="ad/13.png" alt="Project 6"></div>
+                    <div class="project-item"><img src="aw/7.png" alt="Project 7"></div>
+                    <div class="project-item"><img src="bd/6.png" alt="Project 8"></div>
+                    <div class="project-item"><img src="bd/3.png" alt="Project 9"></div>
+                    <div class="project-item"><img src="ad/2.jpeg" alt="Project 10"></div>
+                    <div class="project-item"><img src="aw/11.png" alt="Project 11"></div>
+                    <div class="project-item"><img src="aw/8.png" alt="Project 12"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Testimonials</div>
+                <h2 class="section-title">See What Our Customers Are Saying</h2>
+                <p class="section-text">Our expertise in aluminium and glass manufacturing, custom fabrication and
+                    quality installation has earned us outstanding reviews from satisfied homeowners and businesses.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>Outstanding customer service and attention to detail. The glass partition Aluminium and Glass
+                            Works Dubai installed divides our office space flawlessly. We will certainly hire them
+                            again.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>Leila, Abu Dubai</strong>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>Aluminium and Glass Works Dubai exceeded our expectations. They handled our aluminium door
+                            and glass wall installation with care and expertise. We're thrilled with the final results.
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>Khalid, Sharjah</strong>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>I highly recommend Aluminium and Glass Works Dubai for any aluminium fabrication project. The
+                            custom aluminium windows they designed and installed perfectly match our home's aesthetic.
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>Omar, Dubai</strong>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>Outstanding customer service and attention to detail. The glass partition Aluminium and Glass
+                            Works Dubai installed divides our office space flawlessly. We will certainly hire them
+                            again.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>Leila, Abu Dubai</strong>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>Aluminium and Glass Works Dubai exceeded our expectations. They handled our aluminium door
+                            and glass wall installation with care and expertise. We're thrilled with the final results.
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>Khalid, Sharjah</strong>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>I highly recommend Aluminium and Glass Works Dubai for any aluminium fabrication project. The
+                            custom aluminium windows they designed and installed perfectly match our home's aesthetic.
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>Omar, Dubai</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas Section -->
+    <section class="section" style="background: white;">
+        <div class="container">
+            <div class="service-areas-content">
+                <div class="service-areas-text">
+                    <h2 class="section-title">Proudly Serving the Entire UAE</h2>
+                    <p class="section-text">The United Arab Emirates (UAE) spans approximately 83,600 square kilometers
+                        in the southeastern Arabian Peninsula, bordered by Saudi Arabia to the south and west, and Oman
+                        to the southeast and northeast. We proudly serve homes, apartments, and offices across all seven
+                        emirates.</p>
+
+                    <div class="locations-list">
+                        <h3>Locations We Serve in UAE</h3>
+                        <div class="location-item">
+                            <h4>Glass and Aluminium Services in Dubai</h4>
+                        </div>
+                        <div class="location-item">
+                            <h4>Glass and Aluminium Services in Sharjah</h4>
+                        </div>
+                        <div class="location-item">
+                            <h4>Glass and Aluminium Services in DownTown</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-areas-map">
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875694.0926031573!2d51.579519!3d24.299174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e48dfb1ab12bd%3A0x33d32f56c0080aa7!2sUnited%20Arab%20Emirates!5e0!3m2!1sen!2sae!4v1647875432123!5m2!1sen!2sae"
+                            width="100%" height="350" style="border:0; border-radius: 15px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="map-overlay">
+                            <div class="map-label">United Arab Emirates</div>
+                            <a href="#" class="map-link">View larger map</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo">
+                            <img src="logo.png" alt="Logo" width="50px">
+                            <div>
+                                <div class="logo-text">Aluminium and Glass Works Dubai</div>
+                                <div class="logo-subtitle">BAB AL RAYYAN METAL DOORS &WINDOWS MAKING</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Aluminium and Glass Works Dubai, established in 2000, is a leading UAE-based glass and aluminum
+                        contracting company providing installation services and quality products across the Emirates for
+                        over a decade.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/971588806498" class="social-link" aria-label="WhatsApp">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="tel:+971588806498">Contact Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Aluminium</h3>
+                    <ul class="footer-links">
+                        <li><a href="page1.html">Aluminium Doors</a></li>
+                        <li><a href="page2.html">Aluminium Windows</a></li>
+                        <li><a href="page3.html">Aluminium Pergola</a></li>
+                        <li><a href="page4.html">Bifold Doors</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Glass</h3>
+                    <ul class="footer-links">
+                        <li><a href="page7.html">Shower Glass</a></li>
+                        <li><a href="page6.html">Glass Partition</a></li>
+                        <li><a href="page5.html">Glass Room</a></li>
+                        <li><a href="page8.html">Glass Railing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section contact-info">
+                    <h3>Contact</h3>
+                    <div class="contact-map mb-1">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.7!2d55.5!3d25.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDI0JzAwLjAiTiA1NcKwMzAnMDAuMCJF!5e0!3m2!1sen!2sae!4v1234567890"
+                            width="100%" height="120" style="border:0; border-radius: 8px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="contact-details">
+                        <p><strong>+971588806498</strong></p>
+                        <p>Shop no 8, Near Storia Hotel Meena Bazar<br>Burdubai- United Arab Emirates</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Copyright © 2024 - Paras Gupta BAB AL RAYYAN METAL DOORS &WINDOWS MAKING</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/971588806498" target="_blank" class="whatsapp-btn" aria-label="Contact via WhatsApp">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516" />
+            </svg>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu functionality
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        function toggleMobileMenu() {
+            navMenu.classList.toggle('active');
+            mobileMenuToggle.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+
+            // Close all dropdowns when toggling mobile menu
+            document.querySelectorAll('.dropdown').forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
+
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+
+        // Dropdown functionality
+        function initializeDropdowns() {
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            dropdowns.forEach(dropdown => {
+                const toggle = dropdown.querySelector('.dropdown-toggle');
+                const menu = dropdown.querySelector('.dropdown-menu');
+
+                if (toggle && menu) {
+                    // Remove any existing event listeners
+                    toggle.removeEventListener('click', handleDropdownClick);
+
+                    // Add click event listener
+                    toggle.addEventListener('click', handleDropdownClick);
+
+                    // Add hover events for desktop
+                    if (window.innerWidth > 768) {
+                        dropdown.addEventListener('mouseenter', () => {
+                            closeAllDropdowns();
+                            dropdown.classList.add('active');
+                        });
+
+                        dropdown.addEventListener('mouseleave', () => {
+                            dropdown.classList.remove('active');
+                        });
+                    }
+                }
+            });
+        }
+
+        function handleDropdownClick(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const dropdown = e.target.closest('.dropdown');
+            const isActive = dropdown.classList.contains('active');
+
+            // Close all other dropdowns
+            closeAllDropdowns();
+
+            // Toggle current dropdown
+            if (!isActive) {
+                dropdown.classList.add('active');
+            }
+        }
+
+        function closeAllDropdowns() {
+            document.querySelectorAll('.dropdown').forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
+
+        function closeMobileMenu() {
+            navMenu.classList.remove('active');
+            mobileMenuToggle.textContent = '☰';
+            closeAllDropdowns();
+        }
+
+        // Close dropdown/menu when clicking outside
+        document.addEventListener('click', (e) => {
+            // Close dropdowns if clicking outside
+            if (!e.target.closest('.dropdown')) {
+                closeAllDropdowns();
+            }
+
+            // Close mobile menu if clicking outside nav
+            if (!e.target.closest('.nav-container')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close mobile menu when clicking nav links (but not dropdown toggles)
+        document.querySelectorAll('.nav-menu a:not(.dropdown-toggle)').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Close dropdown when clicking dropdown menu items
+        document.querySelectorAll('.dropdown-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                closeAllDropdowns();
+                closeMobileMenu();
+            });
+        });
+
+        // Handle window resize
+        function handleResize() {
+            if (window.innerWidth > 768) {
+                // Desktop: close mobile menu and reinitialize dropdowns
+                closeMobileMenu();
+                initializeDropdowns();
+            } else {
+                // Mobile: remove hover events and reinitialize
+                document.querySelectorAll('.dropdown').forEach(dropdown => {
+                    dropdown.removeEventListener('mouseenter', () => { });
+                    dropdown.removeEventListener('mouseleave', () => { });
+                });
+                initializeDropdowns();
+            }
+        }
+
+        // Initialize dropdowns on load
+        initializeDropdowns();
+
+        // Reinitialize on resize with debounce
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(handleResize, 250);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Slider functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide-item');
+        const dots = document.querySelectorAll('#sliderDots .dot');
+        const sliderTrack = document.getElementById('sliderTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function getVisibleSlides() {
+            const containerWidth = document.querySelector('.slider-container').offsetWidth;
+            const slideWidth = 280;
+            const gap = 15;
+            return Math.floor((containerWidth + gap) / (slideWidth + gap));
+        }
+
+        function updateSlider() {
+            const visibleSlides = getVisibleSlides();
+            const maxSlide = Math.max(0, slides.length - visibleSlides);
+
+            currentSlide = Math.min(currentSlide, maxSlide);
+
+            const slideWidth = 280;
+            const gap = 15;
+            const translateX = -currentSlide * (slideWidth + gap);
+            sliderTrack.style.transform = `translateX(${translateX}px)`;
+
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function nextSlide() {
+            const visibleSlides = getVisibleSlides();
+            const maxSlide = Math.max(0, slides.length - visibleSlides);
+            currentSlide = currentSlide >= maxSlide ? 0 : currentSlide + 1;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            const visibleSlides = getVisibleSlides();
+            const maxSlide = Math.max(0, slides.length - visibleSlides);
+            currentSlide = currentSlide <= 0 ? maxSlide : currentSlide - 1;
+            updateSlider();
+        }
+
+        // Event listeners
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                updateSlider();
+            });
+        });
+
+        // Auto-play
+        let autoplayInterval = setInterval(nextSlide, 4000);
+        const sliderContainer = document.querySelector('.slider-container');
+
+        sliderContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoplayInterval);
+        });
+
+        sliderContainer.addEventListener('mouseleave', () => {
+            autoplayInterval = setInterval(nextSlide, 4000);
+        });
+
+        // Touch support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        sliderContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        sliderContainer.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) nextSlide();
+            if (touchEndX > touchStartX + 50) prevSlide();
+        }
+
+        // Initialize and handle resize
+        updateSlider();
+        window.addEventListener('resize', updateSlider);
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.service-card, .testimonial-card, .project-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Lazy loading for images
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[data-src]');
+            images.forEach(img => {
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+            });
+        } else {
+            // Fallback for browsers that don't support lazy loading
+            const lazyImages = document.querySelectorAll('img[data-src]');
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            lazyImages.forEach(img => imageObserver.observe(img));
+        }
+
+        // Performance optimization - debounce scroll and resize events
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        const debouncedResize = debounce(updateSlider, 250);
+        window.addEventListener('resize', debouncedResize);
+    </script>
+    <script src="nav-slide.js"></script>
+
+    <script src="mobile-call-button.js"></script>
+
+
+    <script src="mobile-call-button.js"></script>
+
+
+</body>
+
+</html>
